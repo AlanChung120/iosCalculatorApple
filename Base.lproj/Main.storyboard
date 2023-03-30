@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hqb-SZ-3Ni">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator-->
+        <scene sceneID="nnG-8p-lNE">
+            <objects>
+                <viewController id="ZpH-RH-xkL" customClass="CalcViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ids-DS-E2b">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eI-pQ-Ffv">
+                                <rect key="frame" x="0.0" y="161.66666666666666" width="393" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zoj-lw-r0e">
+                                <rect key="frame" x="0.0" y="229" width="393" height="596.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqw-f3-Fjb">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="119.33333333333333"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="AC" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="acTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="qoZ-Up-2p4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9c-YW-M3j">
+                                        <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="119.33333333333333"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+/-" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="Mcx-ef-6vw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrK-qL-Y9H">
+                                        <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="119.33333333333333"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="%" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="percentTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="apj-d4-8QS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozf-wg-Drs">
+                                        <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="119.33333333333333"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="÷" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.96470588450000005" green="0.76862752440000004" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="divideTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="IUP-NY-Fon"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPl-oP-XtD">
+                                        <rect key="frame" x="0.0" y="119.33333333333334" width="98.333333333333329" height="119"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="7" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401227616778" green="0.28698001045034638" blue="0.28197665801416993" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num7Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="OYT-KX-yPH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFw-fG-GL8">
+                                        <rect key="frame" x="98.333333333333343" y="119.33333333333334" width="98.333333333333343" height="119"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="8" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num8Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="hTu-nL-CLB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg9-zM-Ve2">
+                                        <rect key="frame" x="196.66666666666666" y="119.33333333333334" width="97.999999999999972" height="119"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="9" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num9Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="X1e-nm-oNI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diE-Qa-bSn">
+                                        <rect key="frame" x="0.0" y="238.33333333333334" width="98.333333333333329" height="119.33333333333334"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="4" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num4Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="S1f-cD-UNd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uw-NU-BOp">
+                                        <rect key="frame" x="98.333333333333343" y="238.33333333333334" width="98.333333333333343" height="119.33333333333334"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="5" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num5Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="HQZ-OO-O3f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRj-aT-3t4">
+                                        <rect key="frame" x="0.0" y="357.66666666666674" width="98.333333333333329" height="119.33333333333331"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num1Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="KuF-1z-xbN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcI-ry-jBE">
+                                        <rect key="frame" x="98.333333333333343" y="357.66666666666674" width="98.333333333333343" height="119.33333333333331"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num2Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="nME-gf-p3x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UK-dD-uAb">
+                                        <rect key="frame" x="196.66666666666666" y="357.66666666666674" width="97.999999999999972" height="119.33333333333331"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="3" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num3Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="bnX-7q-kne"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTf-Z6-Ixn">
+                                        <rect key="frame" x="0.0" y="476.99999999999994" width="196.66666666666666" height="119.33333333333331"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="0" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num0Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="ckX-nW-IRQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgA-Xa-cce">
+                                        <rect key="frame" x="196.66666666666666" y="476.99999999999994" width="97.999999999999972" height="119.33333333333331"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="." cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="dotTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="XIA-oB-zUG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chR-97-zzW">
+                                        <rect key="frame" x="294.66666666666669" y="238.33333333333334" width="98.333333333333314" height="119.33333333333334"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="-" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.96470588450000005" green="0.76862752440000004" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="minusTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="Sy3-To-kGQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh8-Wq-JZu">
+                                        <rect key="frame" x="294.66666666666669" y="119.33333333333334" width="98.333333333333314" height="119"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="X" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.96470588450000005" green="0.76862752440000004" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="multiplyTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="pFS-2G-cRX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-bC-tUD">
+                                        <rect key="frame" x="294.66666666666669" y="357.66666666666674" width="98.333333333333314" height="119.33333333333331"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.96470588450000005" green="0.76862752440000004" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="plusTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="bET-He-ArS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBF-dH-18E">
+                                        <rect key="frame" x="196.66666666666666" y="238.33333333333334" width="97.999999999999972" height="119.33333333333334"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="6" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.29454401229999999" green="0.28698001049999999" blue="0.28197665799999999" alpha="1" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="num6Tapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="b0l-XY-jr3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptC-C7-1ZM">
+                                        <rect key="frame" x="294.66666666666669" y="476.99999999999994" width="98.333333333333314" height="119.33333333333331"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="=" cornerStyle="fixed">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="0.96470588450000005" green="0.76862752440000004" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="equalsTapped:" destination="ZpH-RH-xkL" eventType="touchUpInside" id="nah-JZ-46K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstItem="bqw-f3-Fjb" firstAttribute="leading" secondItem="Zoj-lw-r0e" secondAttribute="leading" id="0LO-dH-S2w"/>
+                                    <constraint firstItem="5Uw-NU-BOp" firstAttribute="leading" secondItem="diE-Qa-bSn" secondAttribute="trailing" id="1F7-sA-VDh"/>
+                                    <constraint firstItem="QcI-ry-jBE" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="1f3-6k-V0T"/>
+                                    <constraint firstItem="Xh8-Wq-JZu" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="1uV-AK-m2v"/>
+                                    <constraint firstItem="5Uw-NU-BOp" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="2pH-u5-qg3"/>
+                                    <constraint firstItem="Rg9-zM-Ve2" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="2zp-co-94g"/>
+                                    <constraint firstItem="KRj-aT-3t4" firstAttribute="top" secondItem="diE-Qa-bSn" secondAttribute="bottom" id="3mN-La-g5e"/>
+                                    <constraint firstItem="xTf-Z6-Ixn" firstAttribute="leading" secondItem="Zoj-lw-r0e" secondAttribute="leading" id="59f-bs-IZP"/>
+                                    <constraint firstItem="Rg9-zM-Ve2" firstAttribute="top" secondItem="qrK-qL-Y9H" secondAttribute="bottom" id="5DR-iD-riJ"/>
+                                    <constraint firstItem="ptC-C7-1ZM" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="5Uy-eU-JHY"/>
+                                    <constraint firstItem="JFw-fG-GL8" firstAttribute="leading" secondItem="RPl-oP-XtD" secondAttribute="trailing" id="5aV-x9-sFB"/>
+                                    <constraint firstItem="Xh8-Wq-JZu" firstAttribute="leading" secondItem="Rg9-zM-Ve2" secondAttribute="trailing" id="68z-lI-D4H"/>
+                                    <constraint firstItem="QcI-ry-jBE" firstAttribute="leading" secondItem="KRj-aT-3t4" secondAttribute="trailing" id="73g-Sm-44O"/>
+                                    <constraint firstItem="ozf-wg-Drs" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="8Rh-n0-DXp"/>
+                                    <constraint firstItem="cBF-dH-18E" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="9Y3-3p-8Dh"/>
+                                    <constraint firstItem="bqw-f3-Fjb" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="AFg-lU-yVJ"/>
+                                    <constraint firstItem="5Uw-NU-BOp" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="BIv-Jm-GqF"/>
+                                    <constraint firstItem="ozf-wg-Drs" firstAttribute="leading" secondItem="qrK-qL-Y9H" secondAttribute="trailing" id="BWF-5d-kqg"/>
+                                    <constraint firstItem="xTf-Z6-Ixn" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="Bsq-cL-XnB"/>
+                                    <constraint firstItem="E9c-YW-M3j" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="C5X-oL-2qB"/>
+                                    <constraint firstItem="ptC-C7-1ZM" firstAttribute="top" secondItem="dbd-bC-tUD" secondAttribute="bottom" id="D2O-0q-tgD"/>
+                                    <constraint firstItem="Rg9-zM-Ve2" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="DKK-DF-Ta3"/>
+                                    <constraint firstItem="bqw-f3-Fjb" firstAttribute="top" secondItem="Zoj-lw-r0e" secondAttribute="top" id="DKv-lx-WMl"/>
+                                    <constraint firstItem="chR-97-zzW" firstAttribute="top" secondItem="Xh8-Wq-JZu" secondAttribute="bottom" id="EHz-tr-SYP"/>
+                                    <constraint firstItem="diE-Qa-bSn" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="ElS-iE-bpF"/>
+                                    <constraint firstItem="diE-Qa-bSn" firstAttribute="leading" secondItem="Zoj-lw-r0e" secondAttribute="leading" id="FBC-MM-kaO"/>
+                                    <constraint firstItem="KRj-aT-3t4" firstAttribute="leading" secondItem="Zoj-lw-r0e" secondAttribute="leading" id="Fh6-nT-ynJ"/>
+                                    <constraint firstItem="ozf-wg-Drs" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="Gnu-RS-HXg"/>
+                                    <constraint firstItem="E9c-YW-M3j" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="H5l-Zs-Zyg"/>
+                                    <constraint firstItem="ptC-C7-1ZM" firstAttribute="leading" secondItem="qgA-Xa-cce" secondAttribute="trailing" id="IEw-kw-zFe"/>
+                                    <constraint firstItem="diE-Qa-bSn" firstAttribute="top" secondItem="RPl-oP-XtD" secondAttribute="bottom" id="IKF-wj-1JN"/>
+                                    <constraint firstItem="cBF-dH-18E" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="Ie6-Dd-d8d"/>
+                                    <constraint firstItem="cBF-dH-18E" firstAttribute="leading" secondItem="5Uw-NU-BOp" secondAttribute="trailing" id="Iul-Ld-jQs"/>
+                                    <constraint firstItem="dbd-bC-tUD" firstAttribute="top" secondItem="chR-97-zzW" secondAttribute="bottom" id="Jh7-Ej-kbb"/>
+                                    <constraint firstItem="RPl-oP-XtD" firstAttribute="top" secondItem="bqw-f3-Fjb" secondAttribute="bottom" id="P1c-r6-8I9"/>
+                                    <constraint firstItem="JFw-fG-GL8" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="R4X-Pt-uKc"/>
+                                    <constraint firstItem="qrK-qL-Y9H" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="TPe-4Y-p7p"/>
+                                    <constraint firstItem="Xh8-Wq-JZu" firstAttribute="top" secondItem="ozf-wg-Drs" secondAttribute="bottom" id="TS7-MJ-DGh"/>
+                                    <constraint firstItem="cBF-dH-18E" firstAttribute="top" secondItem="Rg9-zM-Ve2" secondAttribute="bottom" id="Tku-vp-aZZ"/>
+                                    <constraint firstItem="3UK-dD-uAb" firstAttribute="top" secondItem="cBF-dH-18E" secondAttribute="bottom" id="U0P-dv-Gek"/>
+                                    <constraint firstItem="RPl-oP-XtD" firstAttribute="leading" secondItem="Zoj-lw-r0e" secondAttribute="leading" id="V8K-qR-wp8"/>
+                                    <constraint firstItem="E9c-YW-M3j" firstAttribute="top" secondItem="Zoj-lw-r0e" secondAttribute="top" id="Wms-D5-K3A"/>
+                                    <constraint firstItem="QcI-ry-jBE" firstAttribute="top" secondItem="5Uw-NU-BOp" secondAttribute="bottom" id="X6z-jI-aFE"/>
+                                    <constraint firstItem="JFw-fG-GL8" firstAttribute="top" secondItem="E9c-YW-M3j" secondAttribute="bottom" id="Xa9-Yn-4ZQ"/>
+                                    <constraint firstItem="ptC-C7-1ZM" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="Xwr-gr-cFF"/>
+                                    <constraint firstItem="5Uw-NU-BOp" firstAttribute="top" secondItem="JFw-fG-GL8" secondAttribute="bottom" id="YkL-r0-EcN"/>
+                                    <constraint firstItem="qgA-Xa-cce" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="Z9v-eh-oF4"/>
+                                    <constraint firstItem="qrK-qL-Y9H" firstAttribute="top" secondItem="Zoj-lw-r0e" secondAttribute="top" id="ZuU-5M-5Ww"/>
+                                    <constraint firstItem="RPl-oP-XtD" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="a9t-CT-qmK"/>
+                                    <constraint firstItem="xTf-Z6-Ixn" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.5" id="aOT-n3-wfH"/>
+                                    <constraint firstItem="3UK-dD-uAb" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="ag1-Yf-I2O"/>
+                                    <constraint firstItem="KRj-aT-3t4" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="b9z-Hb-JU9"/>
+                                    <constraint firstItem="dbd-bC-tUD" firstAttribute="leading" secondItem="3UK-dD-uAb" secondAttribute="trailing" id="bUU-hI-usp"/>
+                                    <constraint firstItem="qgA-Xa-cce" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="bjx-D7-2zm"/>
+                                    <constraint firstItem="RPl-oP-XtD" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="eXb-Bj-a2e"/>
+                                    <constraint firstItem="chR-97-zzW" firstAttribute="leading" secondItem="cBF-dH-18E" secondAttribute="trailing" id="fWg-9W-qV4"/>
+                                    <constraint firstItem="xTf-Z6-Ixn" firstAttribute="top" secondItem="KRj-aT-3t4" secondAttribute="bottom" id="fcT-x4-k2A"/>
+                                    <constraint firstItem="qrK-qL-Y9H" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="fzg-Jy-f8U"/>
+                                    <constraint firstItem="ozf-wg-Drs" firstAttribute="top" secondItem="Zoj-lw-r0e" secondAttribute="top" id="hd8-C9-Rl6"/>
+                                    <constraint firstItem="qgA-Xa-cce" firstAttribute="top" secondItem="3UK-dD-uAb" secondAttribute="bottom" id="iap-hM-okF"/>
+                                    <constraint firstItem="chR-97-zzW" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="iyX-Wt-lJq"/>
+                                    <constraint firstItem="chR-97-zzW" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="jhr-dT-VAR"/>
+                                    <constraint firstItem="qrK-qL-Y9H" firstAttribute="leading" secondItem="E9c-YW-M3j" secondAttribute="trailing" id="jtv-Ub-WrW"/>
+                                    <constraint firstItem="QcI-ry-jBE" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="kFY-ph-We2"/>
+                                    <constraint firstItem="3UK-dD-uAb" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="kd3-gF-5Lj"/>
+                                    <constraint firstItem="dbd-bC-tUD" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="kkN-3a-W9N"/>
+                                    <constraint firstItem="3UK-dD-uAb" firstAttribute="leading" secondItem="QcI-ry-jBE" secondAttribute="trailing" id="lAg-J9-Xfd"/>
+                                    <constraint firstItem="KRj-aT-3t4" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="lvT-aG-GH7"/>
+                                    <constraint firstItem="qgA-Xa-cce" firstAttribute="leading" secondItem="xTf-Z6-Ixn" secondAttribute="trailing" id="m0C-Lp-gnX"/>
+                                    <constraint firstItem="dbd-bC-tUD" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="nBW-ij-DGF"/>
+                                    <constraint firstItem="E9c-YW-M3j" firstAttribute="leading" secondItem="bqw-f3-Fjb" secondAttribute="trailing" id="ndO-Ul-C6e"/>
+                                    <constraint firstItem="Xh8-Wq-JZu" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="ngK-Fb-Cro"/>
+                                    <constraint firstItem="diE-Qa-bSn" firstAttribute="height" secondItem="Zoj-lw-r0e" secondAttribute="height" multiplier="0.2" id="qOG-8U-edo"/>
+                                    <constraint firstItem="bqw-f3-Fjb" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="s27-lV-Dnt"/>
+                                    <constraint firstItem="Rg9-zM-Ve2" firstAttribute="leading" secondItem="JFw-fG-GL8" secondAttribute="trailing" id="tu2-2Y-m5a"/>
+                                    <constraint firstItem="JFw-fG-GL8" firstAttribute="width" secondItem="Zoj-lw-r0e" secondAttribute="width" multiplier="0.25" id="xib-ce-TKn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nxu-Ff-WaK"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zoj-lw-r0e" secondAttribute="trailing" id="1v0-ew-69T"/>
+                            <constraint firstItem="Zoj-lw-r0e" firstAttribute="height" secondItem="ids-DS-E2b" secondAttribute="height" multiplier="0.7" id="3LV-S0-1tz"/>
+                            <constraint firstItem="Nxu-Ff-WaK" firstAttribute="bottom" secondItem="Zoj-lw-r0e" secondAttribute="bottom" id="3Vg-i3-vFU"/>
+                            <constraint firstAttribute="trailing" secondItem="8eI-pQ-Ffv" secondAttribute="trailing" id="4NT-ZE-zIa"/>
+                            <constraint firstItem="Zoj-lw-r0e" firstAttribute="top" secondItem="8eI-pQ-Ffv" secondAttribute="bottom" id="6fd-lP-wDd"/>
+                            <constraint firstItem="Zoj-lw-r0e" firstAttribute="leading" secondItem="ids-DS-E2b" secondAttribute="leading" id="D3F-S1-v50"/>
+                            <constraint firstItem="8eI-pQ-Ffv" firstAttribute="leading" secondItem="ids-DS-E2b" secondAttribute="leading" id="S8q-EG-gd2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calculator" id="AXd-Qr-uKR"/>
+                    <connections>
+                        <outlet property="result" destination="8eI-pQ-Ffv" id="Qdq-3D-UNu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAF-ft-Cr5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674.04580152671758" y="-36.619718309859159"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KMc-Vb-5lw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hqb-SZ-3Ni" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kbK-kb-4qm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZpH-RH-xkL" kind="relationship" relationship="rootViewController" id="He4-8l-DBA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8l-x5-rGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-251.14503816793894" y="-36.619718309859159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
